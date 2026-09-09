@@ -1,0 +1,3 @@
+* xref:hands-on-lab.adoc[]
+** xref:configuring-the-command-line-assistant.adoc[]
+** xref:executing-system-tasks-using-natural-language-queries.adoc[]

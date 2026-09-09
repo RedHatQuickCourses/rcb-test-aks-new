@@ -1,0 +1,11 @@
+#  Introduction to RHEL Lightspeed
+
+= Introduction to RHEL Lightspeed
+
+RHEL Lightspeed provides intelligent, AI-driven functionalities designed to enhance how you manage your system environment. Whether you are a new or experienced user, it streamlines RHEL operations by making system configuration, management, and troubleshooting more accessible.
+
+Key features include:
+
+* **AI-driven expertise:** Leverages advanced intelligence to assist with RHEL-related tasks.
+* **Simplified interaction:** Supports using plain language to interact with your system, reducing the need for complex, manual command-line syntax.
+* **Versatile support:** Provides guidance for troubleshooting, deciphering log entries, and performing general system management duties.

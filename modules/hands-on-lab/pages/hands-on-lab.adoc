@@ -1,0 +1,9 @@
+#  Hands-on Lab
+
+= Hands-on Lab
+
+The hands-on lab provides practical experience with RHEL Lightspeed, focusing on the following key areas:
+
+* **Configuration:** Setting up the command-line assistant to interact directly with your RHEL environment.
+* **Natural Language Interaction:** Learning to use the `c` command syntax to query the assistant for system management and troubleshooting tasks.
+* **Task Execution:** Applying AI-driven insights to resolve real-world system issues using plain language prompts.

@@ -1,0 +1,3 @@
+* xref:using-the-command-line-assistant.adoc[]
+** xref:overview-of-the-rhel-lightspeed-command-line-interface.adoc[]
+** xref:answering-rhel-related-questions-using-plain-language.adoc[]

@@ -1,0 +1,31 @@
+#  Overview of the RHEL Lightspeed command-line interface
+
+= Overview of the RHEL Lightspeed command-line interface
+
+The RHEL Lightspeed command-line interface (CLI) represents a paradigm shift in how administrators and developers interact with Red Hat Enterprise Linux. By integrating generative AI capabilities directly into the terminal environment, it bridges the gap between complex system administration tasks and natural language interaction.
+
+== Understanding the Interface
+Unlike a traditional shell where you are required to memorize specific flag syntax, arguments, and complex piping operations, the RHEL Lightspeed CLI acts as an intelligent intermediary. It translates your intent—expressed in plain language—into precise RHEL commands.
+
+The interface is designed to support users across all levels of expertise:
+
+*   **For Less Experienced Users:** It reduces the barrier to entry by allowing you to perform administrative tasks without needing to recall specific command-line syntax.
+*   **For Experienced Users:** It serves as a productivity accelerator, allowing you to generate boilerplate commands, script snippets, or troubleshooting queries quickly, reducing the time spent on manual documentation lookups.
+
+== Core Capabilities
+The RHEL Lightspeed CLI interface enables several key functionalities within your terminal:
+
+*   **Natural Language Processing:** You can type requests in plain English, and the interface processes these requests to provide actionable system commands.
+*   **Contextual Troubleshooting:** The interface can assist in analyzing system state and interpreting output, helping you identify potential issues more efficiently.
+*   **Log Deciphering:** Complex log entries can be processed by the assistant, which can then provide an explanation or a recommended course of action based on the identified event.
+*   **Command Generation and Explanation:** Beyond just executing tasks, the interface can explain why a command is used, helping users learn best practices directly within the workflow.
+
+== How It Works: The Interaction Flow
+When you provide an input to the RHEL Lightspeed CLI, the following process occurs:
+
+1.  **Input Parsing:** The CLI captures your natural language query.
+2.  **Contextual Analysis:** The intelligent engine evaluates the intent of your query against known RHEL administrative tasks and system contexts.
+3.  **Command Formulation:** The system generates the corresponding RHEL-compliant commands.
+4.  **Verification and Execution:** The assistant presents the solution for your review, ensuring that you maintain control over system changes before they are applied.
+
+By leveraging this interface, you transform your terminal from a passive command executor into an active, intelligent partner in system management.

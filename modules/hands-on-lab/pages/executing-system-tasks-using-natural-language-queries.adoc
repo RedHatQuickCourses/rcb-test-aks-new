@@ -1,0 +1,55 @@
+#  Executing system tasks using natural language queries
+
+= Executing system tasks using natural language queries
+
+Once you have configured the RHEL Lightspeed command-line assistant, you can transition from manual command syntax research to using natural language queries. This capability allows you to describe the desired state or problem, and the assistant will leverage Red Hat’s official documentation and Knowledgebase to provide actionable guidance.
+
+== Understanding the Query Process
+
+When you submit a natural language query, the command-line assistant performs a structured workflow to ensure the generated response is both contextually relevant and technically accurate:
+
+1.  **Input:** You enter a natural language request (e.g., "How do I configure a static IP address on eth0?").
+2.  **Context Retrieval:** The assistant performs a backend search of RHEL product documentation and Red Hat Knowledgebase articles relevant to your query.
+3.  **Inference:** The assistant combines your prompt, the retrieved knowledge, and system instructions, then sends the package to the configured Large Language Model (LLM) provider.
+4.  **Output:** The LLM generates a response, providing either the specific commands required or a conceptual explanation of the task.
+
+[IMPORTANT]
+====
+The command-line assistant is not intended to process personal information. Ensure that your queries do not contain sensitive data, hostnames, or specific IP addresses that you do not want to be sent to the LLM provider.
+====
+
+== Hands-on Lab: Executing System Tasks
+
+In this lab, you will use natural language to request assistance with a standard system configuration task.
+
+=== Prerequisites
+*   Ensure the RHEL Lightspeed command-line assistant is installed and configured to connect to your LLM provider.
+*   Verify you have an active network connection to the LLM service.
+
+=== Steps
+
+. **Open your terminal** and ensure you are logged into your RHEL environment with the appropriate permissions to execute configuration tasks.
+. **Formulate a clear, direct query.** Instead of asking broad, abstract questions, focus on specific configuration goals. 
++
+*Example:* Instead of "Help with firewalls," use "How can I open port 80/tcp for http traffic using firewalld?"
+
+. **Execute the query** via the command-line assistant.
++
+[source,bash]
+----
+rhel-lightspeed "How do I verify the current status of the firewalld service and list active zones?"
+----
+
+. **Review the output.** The assistant will return an explanation followed by the specific CLI commands (e.g., `systemctl status firewalld` and `firewall-cmd --get-active-zones`).
+. **Verify and Execute:** Carefully review the generated commands. Once confirmed, copy and execute the relevant commands in your terminal to apply the changes.
+. **Refinement:** If the output is too broad, refine your query by adding specific constraints. 
++
+*Example:* "Provide the specific firewalld commands to permanently open port 80 and reload the configuration."
+
+== Troubleshooting Queries
+
+If the assistant returns unexpected results or fails to provide a command, consider the following:
+
+*   **Be Specific:** If the model returns a vague answer, rephrase the query to include the RHEL version (e.g., "on RHEL 9") or the specific service name.
+*   **Check Data Sensitivity:** If the output is blocked or limited, ensure your query did not inadvertently contain personal or identifying system information.
+*   **Validate Documentation:** Always treat the assistant’s output as expert-level advice that should be verified against your specific infrastructure requirements before execution.

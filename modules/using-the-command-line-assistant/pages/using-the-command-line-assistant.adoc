@@ -1,0 +1,10 @@
+#  Using the Command-Line Assistant
+
+= Using the Command-Line Assistant
+
+The RHEL Lightspeed command-line assistant allows you to interact with your RHEL systems using natural language queries to retrieve technical guidance and troubleshooting steps.
+
+*   **Functionality:** You can input plain-language queries to ask questions, such as troubleshooting specific services or searching for files, which the assistant then processes via an LLM provider.
+*   **Data Privacy:** The assistant is not intended to process personal, confidential, or business-sensitive information. Do not include such data in your prompts, as all input is transmitted to the configured LLM provider.
+*   **Requirements:** Ensure the command-line assistant is properly installed and configured in your environment before executing tasks.
+*   **Usage:** Interaction is performed through the command line, where the assistant returns responses based on the provided query and relevant RHEL knowledge.

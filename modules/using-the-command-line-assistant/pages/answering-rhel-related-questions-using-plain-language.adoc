@@ -1,0 +1,55 @@
+#  Answering RHEL-related questions using plain language
+
+= Answering RHEL-related questions using plain language
+
+With RHEL Lightspeed, you no longer need to rely solely on memorizing complex man pages or searching through extensive documentation portals. The command-line assistant acts as an intelligent layer between you and your system, translating your plain-language intent into actionable information or configuration guidance.
+
+== Understanding Natural Language Queries
+The command-line assistant uses generative AI, trained on official Red Hat product documentation and the Red Hat Knowledgebase. This allows it to interpret context-aware questions about your RHEL environment. 
+
+By using plain language, you can:
+* **Explain concepts:** Quickly understand RHEL subsystems, services, or configurations.
+* **Troubleshoot:** Describe an error or an observed behavior to receive suggested diagnostic steps.
+* **Get configuration guidance:** Ask for the recommended procedure to perform specific administrative tasks.
+
+== Using the 'c' Command
+To interact with the assistant, use the `c` command within your terminal. The query must be enclosed in quotation marks to ensure the command-line interface correctly parses your natural language input.
+
+=== Syntax
+[source,bash]
+----
+c "your_question_here"
+----
+
+=== Examples of Plain Language Queries
+Depending on your current task, you might phrase your queries as follows:
+
+* **For conceptual understanding:**
+[source,bash]
+----
+c "What is the purpose of SELinux and how do I check its current status?"
+----
+
+* **For administrative procedures:**
+[source,bash]
+----
+c "How do I add a new user and assign them to the wheel group?"
+----
+
+* **For troubleshooting:**
+[source,bash]
+----
+c "I am receiving a 'Connection refused' error when trying to SSH into my RHEL server. What should I check?"
+----
+
+== Best Practices for Effective Queries
+To get the most accurate and relevant responses from the assistant:
+
+1. **Be Specific:** While the assistant understands natural language, providing specific details (such as service names, error codes, or RHEL versions) helps narrow down the scope of the output.
+2. **State Your Goal:** Clearly define what you are trying to achieve (e.g., "How do I configure..." vs. "Why is this happening...").
+3. **Keep it Contextual:** Since the assistant is RHEL-aware, focusing your questions on Red Hat Enterprise Linux system management will yield the highest quality, documentation-backed results.
+
+[IMPORTANT]
+====
+The RHEL Lightspeed command-line assistant is a tool to support your workflow. Always review the suggested commands or configuration changes before executing them on a production system to ensure they align with your specific environment's requirements and security policies.
+====

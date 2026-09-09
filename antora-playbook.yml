@@ -1,6 +1,6 @@
 site:
-  title: FIXME Course Title
-  start_page: REPLACEREPONAME::index.adoc
+  title:  RHEL Lightspeed
+  start_page: rcb-test-aks-new::index.adoc
 
 antora:
   extensions:

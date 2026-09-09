@@ -1,22 +1,25 @@
-= An Example Quick Course
+=  RHEL Lightspeed
 :navtitle: Home
 
 == Introduction
 
-Course Title: Course title FIXME
+Course Title:  RHEL Lightspeed
 
 Description:
 Course description FIXME
 
-Duration: pass:[<span class="course-total-duration" aria-live="polite">…</span>]
+Duration: FIXME hours
 
-== Objectives
+== Topics covered in this course
 
-On completing this course, you should be able to:
 
-* Observable, measurable objective...
-* Observable, measurable objective...
-* Observable, measurable objective...
+*  Introduction to RHEL Lightspeed
+
+*  Using the Command-Line Assistant
+
+*  Hands-on Lab
+
+
 
 == Prerequisites
 

@@ -1,0 +1,2 @@
+* xref:introduction-to-rhel-lightspeed.adoc[]
+** xref:overview-of-rhel-lightspeed-intelligent-functionalities.adoc[]
