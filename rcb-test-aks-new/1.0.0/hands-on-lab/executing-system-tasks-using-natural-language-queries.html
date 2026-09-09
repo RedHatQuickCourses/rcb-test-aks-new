@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Executing system tasks using natural language queries :: RHEL Lightspeed</title>
+    <link rel="prev" href="configuring-the-command-line-assistant.html">
+    <link rel="next" href="../appendix/appendix.html">
+    <meta name="generator" content="Antora 3.2.0-alpha.12">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/collapsible.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/reading-time.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/audio-transcript.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">RHEL Lightspeed</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/RedHatQuickCourses/REPLACEREPONAME/issues" target="_blank">Report Issues</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="rcb-test-aks-new" data-version="1.0.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">RHEL Lightspeed</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../LABENV/index.html">Lab Environment</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../introduction-to-rhel-lightspeed/introduction-to-rhel-lightspeed.html">Introduction to RHEL Lightspeed</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../introduction-to-rhel-lightspeed/overview-of-rhel-lightspeed-intelligent-functionalities.html">Overview of RHEL Lightspeed intelligent functionalities</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../using-the-command-line-assistant/using-the-command-line-assistant.html">Using the Command-Line Assistant</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../using-the-command-line-assistant/overview-of-the-rhel-lightspeed-command-line-interface.html">Overview of the RHEL Lightspeed command-line interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../using-the-command-line-assistant/answering-rhel-related-questions-using-plain-language.html">Answering RHEL-related questions using plain language</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="hands-on-lab.html">Hands-on Lab</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuring-the-command-line-assistant.html">Configuring the command-line assistant</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="executing-system-tasks-using-natural-language-queries.html">Executing system tasks using natural language queries</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../appendix/appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">RHEL Lightspeed</span>
+    <span class="version">1.0.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">RHEL Lightspeed</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1.0.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">RHEL Lightspeed</a></li>
+    <li><a href="hands-on-lab.html">Hands-on Lab</a></li>
+    <li><a href="executing-system-tasks-using-natural-language-queries.html">Executing system tasks using natural language queries</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Executing system tasks using natural language queries</h1>
+<h1 id="_executing_system_tasks_using_natural_language_queries" class="sect0"><a class="anchor" href="#_executing_system_tasks_using_natural_language_queries"></a>Executing system tasks using natural language queries</h1>
+<div class="paragraph">
+<p>Once you have configured the RHEL Lightspeed command-line assistant, you can transition from manual command syntax research to using natural language queries. This capability allows you to describe the desired state or problem, and the assistant will leverage Red Hat’s official documentation and Knowledgebase to provide actionable guidance.</p>
+</div>
+<div class="sect1">
+<h2 id="_understanding_the_query_process"><a class="anchor" href="#_understanding_the_query_process"></a>Understanding the Query Process</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you submit a natural language query, the command-line assistant performs a structured workflow to ensure the generated response is both contextually relevant and technically accurate:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Input:</strong> You enter a natural language request (e.g., "How do I configure a static IP address on eth0?").</p>
+</li>
+<li>
+<p><strong>Context Retrieval:</strong> The assistant performs a backend search of RHEL product documentation and Red Hat Knowledgebase articles relevant to your query.</p>
+</li>
+<li>
+<p><strong>Inference:</strong> The assistant combines your prompt, the retrieved knowledge, and system instructions, then sends the package to the configured Large Language Model (LLM) provider.</p>
+</li>
+<li>
+<p><strong>Output:</strong> The LLM generates a response, providing either the specific commands required or a conceptual explanation of the task.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The command-line assistant is not intended to process personal information. Ensure that your queries do not contain sensitive data, hostnames, or specific IP addresses that you do not want to be sent to the LLM provider.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hands_on_lab_executing_system_tasks"><a class="anchor" href="#_hands_on_lab_executing_system_tasks"></a>Hands-on Lab: Executing System Tasks</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this lab, you will use natural language to request assistance with a standard system configuration task.</p>
+</div>
+<div class="sect2">
+<h3 id="_prerequisites"><a class="anchor" href="#_prerequisites"></a>Prerequisites</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Ensure the RHEL Lightspeed command-line assistant is installed and configured to connect to your LLM provider.</p>
+</li>
+<li>
+<p>Verify you have an active network connection to the LLM service.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_steps"><a class="anchor" href="#_steps"></a>Steps</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Open your terminal</strong> and ensure you are logged into your RHEL environment with the appropriate permissions to execute configuration tasks.</p>
+</li>
+<li>
+<p><strong>Formulate a clear, direct query.</strong> Instead of asking broad, abstract questions, focus on specific configuration goals.</p>
+<div class="paragraph">
+<p><strong>Example:</strong> Instead of "Help with firewalls," use "How can I open port 80/tcp for http traffic using firewalld?"</p>
+</div>
+</li>
+<li>
+<p><strong>Execute the query</strong> via the command-line assistant.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">rhel-lightspeed "How do I verify the current status of the firewalld service and list active zones?"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Review the output.</strong> The assistant will return an explanation followed by the specific CLI commands (e.g., <code>systemctl status firewalld</code> and <code>firewall-cmd --get-active-zones</code>).</p>
+</li>
+<li>
+<p><strong>Verify and Execute:</strong> Carefully review the generated commands. Once confirmed, copy and execute the relevant commands in your terminal to apply the changes.</p>
+</li>
+<li>
+<p><strong>Refinement:</strong> If the output is too broad, refine your query by adding specific constraints.</p>
+<div class="paragraph">
+<p><strong>Example:</strong> "Provide the specific firewalld commands to permanently open port 80 and reload the configuration."</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_troubleshooting_queries"><a class="anchor" href="#_troubleshooting_queries"></a>Troubleshooting Queries</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If the assistant returns unexpected results or fails to provide a command, consider the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Be Specific:</strong> If the model returns a vague answer, rephrase the query to include the RHEL version (e.g., "on RHEL 9") or the specific service name.</p>
+</li>
+<li>
+<p><strong>Check Data Sensitivity:</strong> If the output is blocked or limited, ensure your query did not inadvertently contain personal or identifying system information.</p>
+</li>
+<li>
+<p><strong>Validate Documentation:</strong> Always treat the assistant’s output as expert-level advice that should be verified against your specific infrastructure requirements before execution.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="configuring-the-command-line-assistant.html">Configuring the command-line assistant</a></span>
+  <span class="next"><a href="../appendix/appendix.html">Appendix</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img src="../../../_/img/rhl-logo-red.png" height="40px" alt="Red Hat"  href="https://redhat.com" >
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script defer src="../../../_/js/vendor/tabs.js"></script>
+<script defer src="../../../_/js/vendor/reading-time.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

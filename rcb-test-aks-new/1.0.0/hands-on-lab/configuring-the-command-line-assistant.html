@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Configuring the command-line assistant :: RHEL Lightspeed</title>
+    <link rel="prev" href="hands-on-lab.html">
+    <link rel="next" href="executing-system-tasks-using-natural-language-queries.html">
+    <meta name="generator" content="Antora 3.2.0-alpha.12">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/collapsible.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/reading-time.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/audio-transcript.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">RHEL Lightspeed</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/RedHatQuickCourses/REPLACEREPONAME/issues" target="_blank">Report Issues</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="rcb-test-aks-new" data-version="1.0.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">RHEL Lightspeed</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../LABENV/index.html">Lab Environment</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../introduction-to-rhel-lightspeed/introduction-to-rhel-lightspeed.html">Introduction to RHEL Lightspeed</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../introduction-to-rhel-lightspeed/overview-of-rhel-lightspeed-intelligent-functionalities.html">Overview of RHEL Lightspeed intelligent functionalities</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../using-the-command-line-assistant/using-the-command-line-assistant.html">Using the Command-Line Assistant</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../using-the-command-line-assistant/overview-of-the-rhel-lightspeed-command-line-interface.html">Overview of the RHEL Lightspeed command-line interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../using-the-command-line-assistant/answering-rhel-related-questions-using-plain-language.html">Answering RHEL-related questions using plain language</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="hands-on-lab.html">Hands-on Lab</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="configuring-the-command-line-assistant.html">Configuring the command-line assistant</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="executing-system-tasks-using-natural-language-queries.html">Executing system tasks using natural language queries</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../appendix/appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">RHEL Lightspeed</span>
+    <span class="version">1.0.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">RHEL Lightspeed</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1.0.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">RHEL Lightspeed</a></li>
+    <li><a href="hands-on-lab.html">Hands-on Lab</a></li>
+    <li><a href="configuring-the-command-line-assistant.html">Configuring the command-line assistant</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Configuring the command-line assistant</h1>
+<h1 id="_configuring_the_rhel_lightspeed_command_line_assistant" class="sect0"><a class="anchor" href="#_configuring_the_rhel_lightspeed_command_line_assistant"></a>Configuring the RHEL Lightspeed command-line assistant</h1>
+<div class="paragraph">
+<p>Before you begin interacting with RHEL Lightspeed, you must ensure your environment is correctly configured. The RHEL Lightspeed command-line assistant serves as an intelligent interface that translates natural language into actionable system commands.</p>
+</div>
+<div class="sect1">
+<h2 id="_prerequisites"><a class="anchor" href="#_prerequisites"></a>Prerequisites</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>You must be running a supported RHEL system. The command-line assistant is supported on:</p>
+</li>
+<li>
+<p>AMD and Intel 64-bit (x86_64)</p>
+</li>
+<li>
+<p>ARM64 (aarch64)</p>
+</li>
+<li>
+<p>IBM Z (s390x)</p>
+</li>
+<li>
+<p>IBM POWER systems (ppc64)</p>
+</li>
+<li>
+<p>You have administrative access (sudo) to install packages.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_security_and_data_privacy_warning"><a class="anchor" href="#_security_and_data_privacy_warning"></a>Security and Data Privacy Warning</h2>
+<div class="sectionbody">
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Do not input the following types of data into the command-line assistant. The tool is not intended to process sensitive or proprietary information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Personal information (PII)</p>
+</li>
+<li>
+<p>Business sensitive information</p>
+</li>
+<li>
+<p>Confidential information</p>
+</li>
+<li>
+<p>System data information (such as private keys or system tokens)</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installing_the_command_line_assistant"><a class="anchor" href="#_installing_the_command_line_assistant"></a>Installing the Command-Line Assistant</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To ensure full support and system integrity, you must install the assistant using the official RHEL repositories. Do not attempt to install via <code>pip</code>, as this is an unsupported method.</p>
+</div>
+<h3 id="_step_by_step_configuration" class="discrete">Step-by-Step Configuration</h3>
+<div class="paragraph">
+<p>Follow these steps to prepare your system:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Verify repository access:</strong>
+Ensure your system is registered with Red Hat Subscription Management or connected to a satellite server that provides access to the RHEL repositories.</p>
+</li>
+<li>
+<p><strong>Install the package:</strong>
+Run the following command to install the assistant:
+[source,bash]
+----
+sudo dnf install rhel-lightspeed-assistant
+----</p>
+</li>
+<li>
+<p><strong>Verify the installation:</strong>
+Confirm the installation was successful by checking the version or help menu:
+[source,bash]
+----
+c --help
+----</p>
+</li>
+<li>
+<p><strong>Initialize the session:</strong>
+Depending on your specific deployment, you may be prompted to authenticate your session. Follow the on-screen instructions to link your credentials to the RHEL Lightspeed service.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_troubleshooting_tips"><a class="anchor" href="#_troubleshooting_tips"></a>Troubleshooting Tips</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Installation Failure:</strong> If the package is not found, verify that your system is subscribed and that the <code>rhel-8-for-x86_64-baseos-rpms</code> (or the equivalent for your architecture) is enabled.</p>
+</li>
+<li>
+<p><strong>Command Not Found:</strong> If the <code>c</code> command is not recognized, ensure that the binary path is correctly added to your <code>$PATH</code> environment variable, typically located at <code>/usr/bin/c</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Once the installation is complete, you are ready to use the command-line assistant to troubleshoot and manage your RHEL system using plain language queries.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="hands-on-lab.html">Hands-on Lab</a></span>
+  <span class="next"><a href="executing-system-tasks-using-natural-language-queries.html">Executing system tasks using natural language queries</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img src="../../../_/img/rhl-logo-red.png" height="40px" alt="Red Hat"  href="https://redhat.com" >
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script defer src="../../../_/js/vendor/tabs.js"></script>
+<script defer src="../../../_/js/vendor/reading-time.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

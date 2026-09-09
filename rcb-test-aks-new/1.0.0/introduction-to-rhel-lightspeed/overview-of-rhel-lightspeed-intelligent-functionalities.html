@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Overview of RHEL Lightspeed intelligent functionalities :: RHEL Lightspeed</title>
+    <link rel="prev" href="introduction-to-rhel-lightspeed.html">
+    <link rel="next" href="../using-the-command-line-assistant/using-the-command-line-assistant.html">
+    <meta name="generator" content="Antora 3.2.0-alpha.12">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/collapsible.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/reading-time.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/audio-transcript.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">RHEL Lightspeed</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/RedHatQuickCourses/REPLACEREPONAME/issues" target="_blank">Report Issues</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="rcb-test-aks-new" data-version="1.0.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">RHEL Lightspeed</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../LABENV/index.html">Lab Environment</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="introduction-to-rhel-lightspeed.html">Introduction to RHEL Lightspeed</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="overview-of-rhel-lightspeed-intelligent-functionalities.html">Overview of RHEL Lightspeed intelligent functionalities</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../using-the-command-line-assistant/using-the-command-line-assistant.html">Using the Command-Line Assistant</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../using-the-command-line-assistant/overview-of-the-rhel-lightspeed-command-line-interface.html">Overview of the RHEL Lightspeed command-line interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../using-the-command-line-assistant/answering-rhel-related-questions-using-plain-language.html">Answering RHEL-related questions using plain language</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../hands-on-lab/hands-on-lab.html">Hands-on Lab</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hands-on-lab/configuring-the-command-line-assistant.html">Configuring the command-line assistant</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hands-on-lab/executing-system-tasks-using-natural-language-queries.html">Executing system tasks using natural language queries</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../appendix/appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">RHEL Lightspeed</span>
+    <span class="version">1.0.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">RHEL Lightspeed</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1.0.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">RHEL Lightspeed</a></li>
+    <li><a href="introduction-to-rhel-lightspeed.html">Introduction to RHEL Lightspeed</a></li>
+    <li><a href="overview-of-rhel-lightspeed-intelligent-functionalities.html">Overview of RHEL Lightspeed intelligent functionalities</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Overview of RHEL Lightspeed intelligent functionalities</h1>
+<h1 id="_rhel_lightspeed_intelligent_functionalities_overview" class="sect0"><a class="anchor" href="#_rhel_lightspeed_intelligent_functionalities_overview"></a>RHEL Lightspeed: Intelligent Functionalities Overview</h1>
+<div class="paragraph">
+<p>RHEL Lightspeed introduces advanced AI-driven capabilities designed to streamline the management of Red Hat Enterprise Linux (RHEL) systems. By integrating intelligent assistance directly into the RHEL ecosystem, it bridges the gap between complex system administration tasks and user accessibility, catering to both novices and seasoned system administrators.</p>
+</div>
+<div class="sect1">
+<h2 id="_core_intelligent_functionalities"><a class="anchor" href="#_core_intelligent_functionalities"></a>Core Intelligent Functionalities</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>RHEL Lightspeed functions as an intelligent companion that leverages a vast repository of Red Hat’s official technical resources, including Knowledge Centered Service (KCS) articles, comprehensive product documentation, and verified best practices.</p>
+</div>
+<div class="paragraph">
+<p>The primary intelligent features include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Natural Language Interaction:</strong> Users can move beyond memorizing complex command-line syntax. RHEL Lightspeed allows you to query the system using plain language, making advanced administration more intuitive.</p>
+</li>
+<li>
+<p><strong>Context-Aware Troubleshooting:</strong> The assistant can analyze system states and log entries to provide actionable insights. Instead of manually parsing cryptic logs, you can engage with the assistant to interpret output and receive guided recommendations for resolution.</p>
+</li>
+<li>
+<p><strong>Knowledge Retrieval:</strong> It serves as a single interface to query Red Hat&#8217;s extensive knowledge base. Whether you are looking for configuration requirements for a new service or searching for a known issue, the assistant synthesizes information to provide precise answers.</p>
+</li>
+<li>
+<p><strong>Interactive Workflow Assistance:</strong> RHEL Lightspeed supports iterative dialogue. You can ask for assistance with a task, receive a suggestion, and then follow up with additional questions to refine the process or diagnose complex issues in real-time.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_strategic_value_for_administrators"><a class="anchor" href="#_strategic_value_for_administrators"></a>Strategic Value for Administrators</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Regardless of your experience level, RHEL Lightspeed provides specific tactical advantages:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">User Profile</th>
+<th class="tableblock halign-left valign-top">Benefit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Less Experienced Users</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reduces the steep learning curve by providing step-by-step guidance and reducing the need to memorize intricate command flags.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Experienced Administrators</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accelerates daily operations by quickly retrieving documentation, automating the lookup of KCS articles, and providing immediate explanations for complex command outputs.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>By synthesizing Red Hat’s specialized knowledge into a conversational interface, RHEL Lightspeed enables teams to resolve issues faster, implement new RHEL features with greater confidence, and maintain higher standards of system health with reduced manual overhead.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="introduction-to-rhel-lightspeed.html">Introduction to RHEL Lightspeed</a></span>
+  <span class="next"><a href="../using-the-command-line-assistant/using-the-command-line-assistant.html">Using the Command-Line Assistant</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img src="../../../_/img/rhl-logo-red.png" height="40px" alt="Red Hat"  href="https://redhat.com" >
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script defer src="../../../_/js/vendor/tabs.js"></script>
+<script defer src="../../../_/js/vendor/reading-time.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>
